@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "dependencies": {
+        "bulma": "^1.0.2",
+        "vite": "^5.4.8"
+    }
+}

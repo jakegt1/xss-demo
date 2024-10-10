@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Server (Very Good)</title>
+    <link rel="stylesheet" href="/main.css">
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a class="navbar-item">Powerful Music Server</a>
+      </div>
+    </nav>
+    <div class="container" id="app">
+      <div class="columns">
+        <div class="column" id="escaped">
+          <h2 style="text-align: center;">Escaped inputs</h2>
+        </div>
+        <div class="column" id="xss">
+          <h2 style="text-align: center;">Non escaped inputs</h2>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Add Song</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded">
+              <input class="input" type="text" placeholder="Title" id="title">
+            </p>
+          </div>
+          <div class="field">
+            <p class="control is-expanded">
+              <input class="input" type="text" placeholder="URL" id="url">
+            </p>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" id="add">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <template id="row">
+      <div class="box content">
+        <slot name="content"></slot>
+      </div>
+    </template>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
